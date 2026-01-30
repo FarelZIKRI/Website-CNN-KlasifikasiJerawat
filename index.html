@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sistem Klasifikasi Tipe Jerawat menggunakan Deep Learning CNN"
+    />
+    <title>CNN-Jerawat</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-icon">🔬</span>
+          <span class="logo-text">AcneAI</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Beranda</a></li>
+          <li><a href="#about" class="nav-link">Tentang</a></li>
+          <li><a href="#features" class="nav-link">Fitur</a></li>
+          <li><a href="#how-it-works" class="nav-link">Cara Kerja</a></li>
+          <li><a href="#demo" class="nav-link">Demo</a></li>
+          <li><a href="#contact" class="nav-link">Kontak</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🧠 Powered by Deep Learning</span>
+        </div>
+        <h1 class="hero-title">
+          Klasifikasi <span class="gradient-text">Jerawat</span>
+          <br />Menggunakan CNN
+        </h1>
+        <p class="hero-description">
+          Sistem cerdas untuk mengidentifikasi dan mengklasifikasikan berbagai
+          tipe jerawat menggunakan teknologi Convolutional Neural Network dan
+          EfficientNet.
+        </p>
+        <div class="hero-buttons">
+          <a href="#demo" class="btn btn-primary">
+            <span>Coba Sekarang</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            <span>Pelajari Lebih</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Tipe Jerawat</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">95%+</span>
+            <span class="stat-label">Akurasi</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">CNN</span>
+            <span class="stat-label">EfficientNet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tentang Proyek</span>
+          <h2 class="section-title">Apa itu Klasifikasi Jerawat?</h2>
+          <p class="section-description">
+            Sistem berbasis AI yang dapat mengidentifikasi tipe jerawat dari
+            gambar wajah
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <h3>Deteksi Cepat</h3>
+            <p>
+              Analisis gambar dalam hitungan detik menggunakan model deep
+              learning teroptimasi
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </div>
+            <h3>Akurasi Tinggi</h3>
+            <p>
+              Menggunakan arsitektur EfficientNet yang telah terbukti akurat
+              dalam klasifikasi gambar
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M7 7h10M7 12h10M7 17h6" />
+              </svg>
+            </div>
+            <h3>Laporan Detail</h3>
+            <p>
+              Memberikan informasi lengkap tentang tipe jerawat dan rekomendasi
+              perawatan
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fitur Unggulan</span>
+          <h2 class="section-title">Teknologi yang Digunakan</h2>
+        </div>
+        <div class="features-showcase">
+          <div class="feature-main">
+            <div class="feature-visual">
+              <div class="neural-network">
+                <div class="layer input-layer">
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                </div>
+                <div class="layer hidden-layer">
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                </div>
+                <div class="layer hidden-layer-2">
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                </div>
+                <div class="layer output-layer">
+                  <div class="neuron active"></div>
+                  <div class="neuron"></div>
+                  <div class="neuron"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon tensorflow">
+                <span>TF</span>
+              </div>
+              <div class="feature-content">
+                <h4>TensorFlow & Keras</h4>
+                <p>
+                  Framework deep learning terkemuka untuk membangun dan melatih
+                  model CNN
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon efficientnet">
+                <span>EN</span>
+              </div>
+              <div class="feature-content">
+                <h4>EfficientNet</h4>
+                <p>
+                  Arsitektur state-of-the-art dengan keseimbangan akurasi dan
+                  efisiensi
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon augmentation">
+                <span>DA</span>
+              </div>
+              <div class="feature-content">
+                <h4>Data Augmentation</h4>
+                <p>
+                  Teknik augmentasi untuk meningkatkan variasi data training
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon python">
+                <span>PY</span>
+              </div>
+              <div class="feature-content">
+                <h4>Python Ecosystem</h4>
+                <p>
+                  Numpy, Matplotlib, Scikit-learn untuk analisis dan visualisasi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Proses</span>
+          <h2 class="section-title">Bagaimana Cara Kerjanya?</h2>
+        </div>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Upload Gambar</h3>
+              <p>
+                Unggah foto area kulit yang ingin dianalisis melalui antarmuka
+                yang mudah digunakan
+              </p>
+            </div>
+            <div class="step-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="17 8 12 3 7 8" />
+                <line x1="12" y1="3" x2="12" y2="15" />
+              </svg>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Preprocessing</h3>
+              <p>
+                Gambar akan diproses dan dinormalisasi untuk input ke model CNN
+              </p>
+            </div>
+            <div class="step-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Analisis CNN</h3>
+              <p>
+                Model EfficientNet menganalisis fitur gambar menggunakan deep
+                learning
+              </p>
+            </div>
+            <div class="step-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Hasil Klasifikasi</h3>
+              <p>
+                Sistem memberikan hasil tipe jerawat beserta tingkat kepercayaan
+                prediksi
+              </p>
+            </div>
+            <div class="step-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Coba Sekarang</span>
+          <h2 class="section-title">Demo Klasifikasi</h2>
+        </div>
+        <div class="demo-container">
+          <div class="demo-upload">
+            <div class="upload-area" id="uploadArea">
+              <div class="upload-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+              </div>
+              <h3>Drag & Drop Gambar</h3>
+              <p>atau klik untuk memilih file</p>
+              <input type="file" id="fileInput" accept="image/*" hidden />
+            </div>
+            <div class="preview-area" id="previewArea">
+              <img id="previewImage" src="" alt="Preview" />
+              <button class="btn-remove" id="removeBtn">×</button>
+            </div>
+          </div>
+          <div class="demo-result">
+            <div class="result-placeholder" id="resultPlaceholder">
+              <div class="placeholder-icon">🔍</div>
+              <p>Hasil klasifikasi akan muncul di sini</p>
+            </div>
+            <div class="result-content" id="resultContent">
+              <div class="result-header">
+                <h3>Hasil Analisis</h3>
+              </div>
+              <div class="result-main">
+                <div class="result-type" id="resultType">
+                  <span class="type-label">Tipe Jerawat:</span>
+                  <span class="type-value" id="typeValue">-</span>
+                </div>
+                <div class="confidence-bar">
+                  <span class="confidence-label">Tingkat Kepercayaan:</span>
+                  <div class="confidence-track">
+                    <div class="confidence-fill" id="confidenceFill"></div>
+                  </div>
+                  <span class="confidence-value" id="confidenceValue">0%</span>
+                </div>
+              </div>
+              <div class="result-details">
+                <h4>Probabilitas Tiap Kelas:</h4>
+                <div class="probability-list" id="probabilityList">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acne Types Section -->
+    <section id="acne-types" class="acne-types">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Jenis Jerawat</span>
+          <h2 class="section-title">Tipe yang Dapat Dideteksi</h2>
+        </div>
+        <div class="types-grid">
+          <div class="type-card">
+            <div class="type-image type-mild">
+              <span>Jerawat Ringan</span>
+            </div>
+            <h3>Jerawat Ringan</h3>
+            <p>
+              Jerawat dengan tingkat keparahan rendah, biasanya berupa komedo
+              terbuka atau tertutup
+            </p>
+            <ul class="type-features">
+              <li>Komedo hitam (blackhead)</li>
+              <li>Komedo putih (whitehead)</li>
+              <li>Beberapa papula kecil</li>
+            </ul>
+          </div>
+          <div class="type-card">
+            <div class="type-image type-moderate">
+              <span>Jerawat Sedang</span>
+            </div>
+            <h3>Jerawat Sedang</h3>
+            <p>
+              Jerawat dengan tingkat keparahan menengah, melibatkan lebih banyak
+              area kulit
+            </p>
+            <ul class="type-features">
+              <li>Papula meradang</li>
+              <li>Pustula (berisi nanah)</li>
+              <li>Beberapa nodul kecil</li>
+            </ul>
+          </div>
+          <div class="type-card">
+            <div class="type-image type-severe">
+              <span>Jerawat Parah</span>
+            </div>
+            <h3>Jerawat Parah</h3>
+            <p>
+              Jerawat dengan tingkat keparahan tinggi yang memerlukan penanganan
+              medis
+            </p>
+            <ul class="type-features">
+              <li>Nodul besar dan dalam</li>
+              <li>Kista berisi nanah</li>
+              <li>Potensi jaringan parut</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <span class="section-tag">Kontak</span>
+            <h2>Hubungi Kami</h2>
+            <p>
+              Tertarik dengan proyek ini? Jangan ragu untuk menghubungi kami
+              untuk informasi lebih lanjut.
+            </p>
+            <div class="contact-links">
+              <a href="https://github.com" class="contact-link" target="_blank">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="mailto:contact@example.com" class="contact-link">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input type="text" placeholder="Nama Anda" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Anda" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="logo-icon">🔬</span>
+            <span class="logo-text">AcneAI</span>
+          </div>
+          <p class="footer-text">
+            Sistem Klasifikasi Jerawat menggunakan Deep Learning CNN
+          </p>
+          <p class="footer-copyright">
+            © 2026 CNN-Klasifikasi Jerawat. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
